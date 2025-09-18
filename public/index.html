@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SSEKYANZI ELVIS Portfolio</title>
+  <title>SSEKYANZI ABDULSALAM Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * {
@@ -57,6 +57,8 @@
     
     /* Hero Section */
     #hero {
+      position: relative;
+      overflow: hidden;
       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
       background-size: cover;
       background-position: center;
@@ -70,14 +72,35 @@
       padding: 20px;
     }
     
+    /* Hero video background styles */
+    .hero-video-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      filter: brightness(0.5) blur(1px);
+    }
+    
     .profile-pic {
+      z-index: 2;
+      border: 6px solid #fff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      background: #fff;
       width: 180px;
       height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid rgba(255, 255, 255, 0.3);
-      margin-bottom: 25px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      max-width: 40vw;
+      max-height: 40vw;
+      margin: 0 auto 25px auto;
+      display: block;
+    }
+    
+    @media (max-width: 600px) {
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+        max-width: 70vw;
+        max-height: 70vw;
+      }
     }
     
     #hero h1 {
@@ -955,10 +978,15 @@
   </nav>
   
   <section id="hero">
-  <img src="ssekyanzi.jpeg" alt="SSEKYANZI ELVIS" class="profile-pic">
-    <h1>SSEKYANZI ELVIS</h1>
-    <p>Computer Scientist | Makerere University</p>
-    <div class="social-links">
+    <video class="hero-video-bg" autoplay muted loop playsinline>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      <!-- Fallback image if video not supported -->
+      Your browser does not support the video tag.
+    </video>
+    <img src="ssekyanzi.jpeg" alt="SSEKYANZI ABDULSALAM" class="profile-pic">
+    <h1 style="z-index:2;position:relative;">SSEKYANZI ABDULSALAM</h1>
+    <p style="z-index:2;position:relative;">Computer Scientist | Makerere University</p>
+    <div class="social-links" style="z-index:2;position:relative;">
       <a href="https://github.com/ssekyanzielvis" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://linkedin.com/in/elvis-ssekyanzi" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://wa.me/256772123456" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -1232,13 +1260,13 @@
     <div class="cv-container">
       <div class="cv-left">
         <div class="cv-photo">
-          <img src="ssekyanzi.jpeg" alt="SSEKYANZI ELVIS" class="cv-profile-pic">
+          <img src="ssekyanzi.jpeg" alt="SSEKYANZI ABDULSALAM" class="cv-profile-pic">
         </div>
         <div class="cv-section">
           <h3 class="cv-section-title">CONTACT INFORMATION</h3>
           <div class="cv-contact-details">
             <p><strong>1. Personal Details</strong></p>
-            <p>Full Name: SSEKYANZI ELVIS</p>
+            <p>Full Name: SSEKYANZI ABDULSALAM</p>
             <p>Phone number: 0706253680</p>
             <p>Professional email address: abdulssekyanzi@gmail.com</p>
             <p>Physical address: Makerere Kikoni</p>
@@ -1276,13 +1304,13 @@
       
       <div class="cv-right">
         <div class="cv-header">
-          <h2 class="cv-name">SSEKYANZI ELVIS</h2>
+          <h2 class="cv-name">SSEKYANZI ABDULSALAM</h2>
           <h3 class="cv-title">UNIVERSITY STUDENT</h3>
         </div>
         
         <div class="cv-section">
           <h3 class="cv-section-title">PROFILE</h3>
-          <p>"I am Ssekyanzi Elvis, a Ugandan Computer Science student at Makerere University, passionate about technology and innovation."</p>
+          <p>"I am Ssekyanzi Abdulsalam, a Ugandan Computer Science student at Makerere University, passionate about technology and innovation."</p>
           <p>"Born and raised in Kampala, I bring a deep understanding of local tech challenges and opportunities in Uganda."</p>
           <p>"As a Muslim, I value discipline, community, and ethical responsibility—principles I apply to my academic and professional work."</p>
           <p>"My studies in Computer Science fuel my curiosity for software development, AI, and solving real-world problems through code."</p>
@@ -1318,10 +1346,10 @@
     <div class="footer-container">
       <div class="footer-section">
         <div class="footer-logo">
-          <h3>SSEKYANZI ELVIS</h3>
+          <h3>SSEKYANZI ABDULSALAM</h3>
           <p>Computer Scientist & Developer</p>
         </div>
-        <p class="footer-copyright">© SSEKYANZI ELVIS 2025</p>
+        <p class="footer-copyright">© SSEKYANZI ABDULSALAM 2025</p>
         <p class="footer-built">Built with <i class="fab fa-html5"></i> <i class="fab fa-css3-alt"></i> <i class="fab fa-js"></i> <i class="fab fa-node-js"></i></p>
       </div>
       
@@ -1354,7 +1382,7 @@
     </div>
     
     <div class="footer-bottom">
-      <p>© SSEKYANZI ELVIS 2025. All rights reserved. | Based in Kampala, Uganda</p>
+      <p>© SSEKYANZI ABDULSALAM 2025. All rights reserved. | Based in Kampala, Uganda</p>
       <p class="footer-tagline"><i class="fas fa-code"></i> Solving real-world challenges through technology</p>
       <div class="footer-easter-egg" title="Click me!">// TODO: Hire this developer!</div>
     </div>
@@ -1432,6 +1460,26 @@
         nav.style.boxShadow = 'none';
       }
     });
+    
+    // Auto-scroll project cards
+    const projectScroll = document.getElementById('projectScroll');
+    let scrollAmount = 0;
+    let autoScrollInterval;
+    function startAutoScroll() {
+      autoScrollInterval = setInterval(() => {
+        if (projectScroll.scrollLeft + projectScroll.clientWidth >= projectScroll.scrollWidth - 1) {
+          projectScroll.scrollLeft = 0;
+        } else {
+          projectScroll.scrollLeft += 2;
+        }
+      }, 20);
+    }
+    function stopAutoScroll() {
+      clearInterval(autoScrollInterval);
+    }
+    projectScroll.addEventListener('mouseenter', stopAutoScroll);
+    projectScroll.addEventListener('mouseleave', startAutoScroll);
+    startAutoScroll();
     
     // Easter egg
     document.querySelector('.footer-easter-egg').addEventListener('click', function() {
