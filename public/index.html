@@ -430,6 +430,297 @@
       font-weight: 500;
     }
     
+    /* CV Section */
+    #cv {
+      width: 100%;
+      max-width: 1200px;
+      padding: 30px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      margin: 80px auto;
+    }
+    
+    /* Footer Styles */
+    .footer {
+      background: linear-gradient(135deg, #1e3a5f 0%, #243b55 100%);
+      color: #fff;
+      padding: 60px 0 0;
+      margin-top: 80px;
+    }
+    
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .footer-section {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    
+    .footer-logo h3 {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+    
+    .footer-logo p {
+      color: #ccc;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+    
+    .footer-copyright, .footer-built {
+      font-size: 0.85rem;
+      color: #aaa;
+      margin: 5px 0;
+    }
+    
+    .footer-built i {
+      color: #6e8efb;
+      margin: 0 3px;
+    }
+    
+    .footer-section h4 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .footer-section h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 50px;
+      background: #6e8efb;
+      border-radius: 3px;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+    
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+      display: block;
+    }
+    
+    .footer-links a:hover {
+      color: #6e8efb;
+      transform: translateX(5px);
+    }
+    
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 1.2rem;
+      transition: all 0.3s;
+    }
+    
+    .footer-social a:hover {
+      background: #6e8efb;
+      transform: translateY(-5px);
+    }
+    
+    .footer-section p {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+    
+    .footer-section p i {
+      margin-right: 10px;
+      color: #6e8efb;
+    }
+    
+    .footer-cta {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #6e8efb;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    
+    .footer-cta:hover {
+      background: #a777e3;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .footer-bottom {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .footer-bottom p {
+      color: #aaa;
+      font-size: 0.85rem;
+      margin: 5px 0;
+    }
+    
+    .footer-tagline {
+      color: #6e8efb;
+      font-style: italic;
+    }
+    
+    .footer-tagline i {
+      margin-right: 5px;
+    }
+    
+    .footer-easter-egg {
+      color: #555;
+      font-family: monospace;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+    
+    .footer-easter-egg:hover {
+      color: #6e8efb;
+      transform: scale(1.05);
+    }
+    
+    .cv-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      gap: 20px;
+    }
+    
+    .cv-left {
+      flex: 1;
+      min-width: 300px;
+      background: #1e3a5f;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    
+    .cv-right {
+      flex: 2;
+      min-width: 400px;
+      padding: 30px;
+      background: #f8f9fa;
+      border-radius: 10px;
+    }
+    
+    .cv-photo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .cv-profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+    }
+    
+    .cv-section {
+      margin-bottom: 30px;
+    }
+    
+    .cv-section-title {
+      border-bottom: 2px solid #6e8efb;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+    
+    .cv-left .cv-section-title {
+      color: white;
+    }
+    
+    .cv-right .cv-section-title {
+      color: #1e3a5f;
+    }
+    
+    .cv-contact-details p,
+    .cv-education p {
+      margin: 5px 0;
+    }
+    
+    .cv-skills-list,
+    .cv-languages-list {
+      padding-left: 20px;
+    }
+    
+    .cv-skills-list li,
+    .cv-languages-list li {
+      margin: 8px 0;
+    }
+    
+    .cv-name {
+      font-size: 2.5rem;
+      color: #1e3a5f;
+      margin-bottom: 5px;
+    }
+    
+    .cv-title {
+      color: #6e8efb;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #e0e0e0;
+    }
+    
+    .cv-right p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+    
+    .cv-references {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .cv-references td {
+      padding: 8px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .cv-references td:last-child {
+      text-align: right;
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
       nav ul {
@@ -464,6 +755,10 @@
       .scroll-controls {
         display: none;
       }
+      
+      .cv-container {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -473,12 +768,13 @@
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#cv">CV</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
   
   <section id="hero">
-  <img src="ssekyanzi.jpg" alt="SSEKYANZI ELVIS" class="profile-pic">
+  <img src="ssekyanzi.jpeg" alt="SSEKYANZI ELVIS" class="profile-pic">
     <h1>SSEKYANZI ELVIS</h1>
     <p>Computer Scientist | Makerere University</p>
     <div class="social-links">
@@ -745,6 +1041,143 @@
     </form>
     <div id="formStatus"></div>
   </section>
+
+  <section id="cv">
+    <div class="section-header">
+      <h2>Curriculum Vitae</h2>
+      <p>My professional background, education, and qualifications</p>
+    </div>
+    
+    <div class="cv-container">
+      <div class="cv-left">
+        <div class="cv-photo">
+          <img src="ssekyanzi.jpeg" alt="SSEKYANZI ELVIS" class="cv-profile-pic">
+        </div>
+        <div class="cv-section">
+          <h3 class="cv-section-title">CONTACT INFORMATION</h3>
+          <div class="cv-contact-details">
+            <p><strong>1. Personal Details</strong></p>
+            <p>Full Name: SSEKYANZI ELVIS</p>
+            <p>Phone number: 0706253680</p>
+            <p>Professional email address: abdulssekyanzi@gmail.com</p>
+            <p>Physical address: Makerere Kikoni</p>
+            <p>Nationality: Ugandan</p>
+            <p>Gender: Male</p>
+          </div>
+        </div>
+        
+        <div class="cv-section">
+          <h3 class="cv-section-title">EDUCATION</h3>
+          <div class="cv-education">
+            <p><strong>(2023-DATE) DEGREE(S): CURRENTLY BACHELOR'S DEGREE IN SCIENCE IN COMPUTER SCIENCE MAKERERE UNIVERSITY.</strong></p>
+            <p><strong>2021-2022 : UGANDA ADVANCED CERTIFICATE OF EDUCATION-BUSIIKA MUSLIM SECONDARY SCHOOL</strong></p>
+            <p><strong>2016-2019 : UGANDA CERTIFICATE OF EDUCATION- BUSIIKA MUSLIM SECONDARY SCHOOL</strong></p>
+          </div>
+        </div>
+        
+        <div class="cv-section">
+          <h3 class="cv-section-title">SKILLS</h3>
+          <ul class="cv-skills-list">
+            <li>Technical Skills: Tools, software, languages (e.g., Mobile Application Development with flutter.</li>
+            <li>Website Development With React, Python Programming).</li>
+            <li>Soft Skills: Communication, leadership, problem-solving.</li>
+          </ul>
+        </div>
+        
+        <div class="cv-section">
+          <h3 class="cv-section-title">LANGUAGES</h3>
+          <ul class="cv-languages-list">
+            <li>English (Fluent)</li>
+            <li>Luganda : Fluent</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="cv-right">
+        <div class="cv-header">
+          <h2 class="cv-name">SSEKYANZI ELVIS</h2>
+          <h3 class="cv-title">UNIVERSITY STUDENT</h3>
+        </div>
+        
+        <div class="cv-section">
+          <h3 class="cv-section-title">PROFILE</h3>
+          <p>"I am Ssekyanzi Elvis, a Ugandan Computer Science student at Makerere University, passionate about technology and innovation."</p>
+          <p>"Born and raised in Kampala, I bring a deep understanding of local tech challenges and opportunities in Uganda."</p>
+          <p>"As a Muslim, I value discipline, community, and ethical responsibility—principles I apply to my academic and professional work."</p>
+          <p>"My studies in Computer Science fuel my curiosity for software development, AI, and solving real-world problems through code."</p>
+          <p>"I aspire to leverage my technical skills to contribute to Uganda's growing tech ecosystem while embracing lifelong learning."</p>
+        </div>
+        
+        <div class="cv-section">
+          <h3 class="cv-section-title">WORK EXPERIENCE</h3>
+          <p><strong>MOBILE APPLICATION DEVELOPMENT</strong></p>
+          <p><strong>WEBSITE DEVELOPMENT WITH REACT</strong></p>
+          <p><strong>MACHINE LEARNING</strong></p>
+          <p>"I am Ssekyanzi Elvis, a Ugandan Computer Science student at Makerere University with 2 years of hands-on experience in Mobile Application Development (Android/iOS), Web Development with React, and Machine Learning. Born and raised in Kampala, I combine technical expertise in Flutter, React Native, Python (TensorFlow/PyTorch), and JavaScript with a passion for solving local challenges through technology. As a Muslim, I approach my work with discipline and ethical responsibility, building scalable mobile apps, dynamic React-powered websites, and AI-driven solutions. My goal is to leverage these skills to innovate within Uganda's tech ecosystem while contributing to impactful, real-world projects."</p>
+        </div>
+        
+        <div class="cv-section">
+          <h3 class="cv-section-title">REFERENCE</h3>
+          <table class="cv-references">
+            <tr>
+              <td>NASSAZZI ANGEL LATIFAH</td>
+              <td>+256 752 682374</td>
+            </tr>
+            <tr>
+              <td>KAGOLO FIRIDAUS</td>
+              <td>+256 701 976391</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <h3>SSEKYANZI ELVIS</h3>
+          <p>Computer Scientist & Developer</p>
+        </div>
+        <p class="footer-copyright">© SSEKYANZI ELVIS 2025</p>
+        <p class="footer-built">Built with <i class="fab fa-html5"></i> <i class="fab fa-css3-alt"></i> <i class="fab fa-js"></i> <i class="fab fa-node-js"></i></p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#cv">CV</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <div class="footer-social">
+          <a href="https://github.com/ssekyanzielvis" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/ssekyanzi-elvis-346301352/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://wa.me/256706253680" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:abdulssekyanzi@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        
+        <h4>Say Hello</h4>
+        <p><i class="fas fa-envelope"></i> abdulssekyanzi@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +256 706 253680</p>
+        <p><i class="fas fa-map-marker-alt"></i> Kampala, Makerere Kikoni</p>
+        <a href="#contact" class="footer-cta">Let's Work Together</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© SSEKYANZI ELVIS 2025. All rights reserved. | Based in Kampala, Uganda</p>
+      <p class="footer-tagline"><i class="fas fa-code"></i> Solving real-world challenges through technology</p>
+      <div class="footer-easter-egg" title="Click me!">// TODO: Hire this developer!</div>
+    </div>
+  </footer>
   
   <script>
     // Project scroll functionality
@@ -768,21 +1201,43 @@
       }
     });
     
-    // Form submission handling
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
+    // Form submission handling -> POST to backend
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
       e.preventDefault();
-      
       const formStatus = document.getElementById('formStatus');
-      formStatus.textContent = 'Thank you for your message! I will get back to you soon.';
+      formStatus.textContent = 'Sending...';
       formStatus.style.color = 'white';
-      
-      // Clear the form
-      this.reset();
-      
-      // Hide the status message after 5 seconds
-      setTimeout(() => {
-        formStatus.textContent = '';
-      }, 5000);
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if (!name || !email || !message) {
+        formStatus.textContent = 'Please fill all fields.';
+        formStatus.style.color = 'yellow';
+        return;
+      }
+
+      try {
+        const res = await fetch('/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, message })
+        });
+        const data = await res.json();
+        if (res.ok && data.status === 'success') {
+          formStatus.textContent = 'Thank you! Your message has been sent.';
+          formStatus.style.color = 'lightgreen';
+          this.reset();
+        } else {
+          formStatus.textContent = data.error || 'Submission failed. Please try again.';
+          formStatus.style.color = 'orange';
+        }
+      } catch (err) {
+        formStatus.textContent = 'Network error. Please try again later.';
+        formStatus.style.color = 'red';
+      }
+
+      setTimeout(() => { formStatus.textContent = ''; }, 6000);
     });
     
     // Navbar background on scroll
@@ -795,6 +1250,24 @@
         nav.style.background = 'linear-gradient(90deg, #6e8efb, #a777e3)';
         nav.style.boxShadow = 'none';
       }
+    });
+    
+    // Easter egg
+    document.querySelector('.footer-easter-egg').addEventListener('click', function() {
+      const messages = [
+        'You found a secret! 🎉',
+        'Hire me and get a free virtual high-five! 👋',
+        'Coffee + Code = Magic ✨',
+        'Did you know I love problem-solving?',
+        'Challenge accepted! 💪'
+      ];
+      
+      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+      alert(randomMessage);
+      
+      // Also log to console for fellow developers
+      console.log('%c👋 Hello fellow developer!', 'font-size: 20px; color: #6e8efb;');
+      console.log('%cLooking for a passionate developer? Hire me!', 'font-size: 16px;');
     });
   </script>
 </body>
