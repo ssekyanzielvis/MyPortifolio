@@ -72,13 +72,47 @@
       padding: 20px;
     }
     
-    /* Hero video background styles */
+    .hero-bg-container {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 0;
+      overflow: hidden;
+    }
+    
     .hero-video-bg {
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%;
       object-fit: cover;
       z-index: 0;
       filter: brightness(0.5) blur(1px);
+      display: block;
+    }
+    
+    .hero-image-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      filter: brightness(0.5) blur(1px);
+      display: none;
+    }
+    
+    @media (max-width: 800px) {
+      .hero-video-bg {
+        display: none !important;
+      }
+      .hero-image-bg {
+        display: block !important;
+      }
+    }
+    
+    @media (min-width: 801px) {
+      .hero-video-bg {
+        display: block !important;
+      }
+      .hero-image-bg {
+        display: none !important;
+      }
     }
     
     .profile-pic {
@@ -978,13 +1012,15 @@
   </nav>
   
   <section id="hero">
-    <video class="hero-video-bg" autoplay muted loop playsinline>
-      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      <!-- Fallback image if video not supported -->
-      Your browser does not support the video tag.
-    </video>
-    <img src="ssekyanzi.jpeg" alt="SSEKYANZI ABDULSALAM" class="profile-pic">
-    <h1 style="z-index:2;position:relative;">SSEKYANZI ABDULSALAM</h1>
+    <div class="hero-bg-container">
+      <video class="hero-video-bg" autoplay muted loop playsinline>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img class="hero-image-bg" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Computer Science" />
+    </div>
+    <img src="ssekyanzi.jpeg" alt="SSEKYANZI ELVIS" class="profile-pic">
+    <h1 style="z-index:2;position:relative;">SSEKYANZI ELVIS</h1>
     <p style="z-index:2;position:relative;">Computer Scientist | Makerere University</p>
     <div class="social-links" style="z-index:2;position:relative;">
       <a href="https://github.com/ssekyanzielvis" target="_blank"><i class="fab fa-github"></i></a>
