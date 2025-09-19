@@ -23,6 +23,11 @@
   </script>
   <link rel="stylesheet" href="css/custom.css">
   <style>
+    .text-2xs {
+      font-size: 0.65rem;
+      line-height: 0.85rem;
+    }
+    
     * {
       margin: 0;
       padding: 0;
@@ -166,13 +171,18 @@
       background-color: rgba(255, 255, 255, 0.8);
     }
     
+    /* Media queries for mobile devices */
     @media (max-width: 800px) {
       .hamburger {
         display: flex;
       }
       
       nav {
-        padding: 15px 20px;
+        padding: 12px 16px;
+      }
+      
+      .logo {
+        font-size: 1.3rem; /* Smaller logo on mobile */
       }
       
       nav ul {
@@ -1113,6 +1123,37 @@
         flex-direction: column;
       }
     }
+    
+    /* Extra Small Screens */
+    @media (max-width: 375px) {
+      nav {
+        padding: 8px 12px;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul li {
+        margin: 5px 0;
+      }
+      .profile-pic {
+        width: 90px !important;
+        height: 90px !important;
+      }
+      #hero h1 {
+        font-size: 1.5rem !important;
+      }
+      #hero p {
+        font-size: 0.8rem !important;
+        max-width: 90vw;
+      }
+      .skill-name {
+        font-size: 0.75rem !important;
+      }
+      .project-card {
+        width: 250px !important;
+      }
+    }
 
     /* Extra Responsive Design for All Screens */
     @media (max-width: 600px) {
@@ -1484,6 +1525,64 @@
         font-size: 0.75rem;
       }
     }
+    
+    /* Extra small devices (phones, 375px and down) */
+    @media (max-width: 375px) {
+      nav {
+        padding: 10px 12px;
+      }
+      
+      .logo {
+        font-size: 1.2rem;
+      }
+      
+      .hamburger {
+        width: 36px;
+        height: 36px;
+      }
+      
+      .hamburger span {
+        width: 22px;
+        height: 2px;
+        margin: 2px 0;
+      }
+      
+      #hero h1 {
+        font-size: 2rem;
+      }
+      
+      #hero p {
+        font-size: 1rem;
+      }
+      
+      .social-links {
+        gap: 10px;
+      }
+      
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+      
+      /* Make content more readable on very small screens */
+      .text-sm {
+        font-size: 0.8125rem !important;
+      }
+      
+      .text-xs {
+        font-size: 0.75rem !important;
+      }
+      
+      /* Better padding for small screens */
+      .p-4, .px-4, .py-4 {
+        padding: 0.875rem !important;
+      }
+      
+      .p-3, .px-3, .py-3 {
+        padding: 0.625rem !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1504,7 +1603,7 @@
     </ul>
   </nav>
   
-  <section id="hero" class="relative flex flex-col justify-center items-center text-center text-white h-screen overflow-hidden">
+  <section id="hero" class="relative flex flex-col justify-center items-center text-center text-white h-screen overflow-hidden px-4">
     <div class="absolute inset-0 z-0 overflow-hidden">
       <video class="absolute inset-0 w-full h-full object-cover filter brightness-50 blur-[1px]" autoplay muted loop playsinline>
         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
@@ -1513,16 +1612,28 @@
       <img class="absolute inset-0 w-full h-full object-cover filter brightness-50 blur-[1px] hidden" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Computer Science" />
       <div class="absolute inset-0 bg-black/50"></div>
     </div>
-    <img src="ssekyanzi.jpeg" alt="SSEKYANZI ELVIS" class="w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover z-10 mb-6">
-    <h1 class="text-4xl md:text-5xl font-bold mb-3 z-10">SSEKYANZI ABDULSALAM</h1>
-    <p class="text-xl md:text-2xl z-10">Computer Scientist | Makerere University</p>
-    <div class="social-links" style="z-index:2;position:relative;">
-      <a href="https://github.com/ssekyanzielvis" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/elvis-ssekyanzi" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://wa.me/0706253680" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="mailto:ssekyanzi.elvis@example.com"><i class="fas fa-envelope"></i></a>
-      <a href="tel:+0706253680"><i class="fas fa-phone"></i></a>
-      <a href="#" title="Kampala, Uganda"><i class="fas fa-map-marker-alt"></i></a>
+    <img src="ssekyanzi.jpeg" alt="SSEKYANZI ABDULSALAM" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full border-4 border-white shadow-lg object-cover z-10 mb-4 sm:mb-6">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-3 z-10 px-2">SSEKYANZI ABDULSALAM</h1>
+    <p class="text-lg sm:text-xl md:text-2xl z-10 mb-4">Computer Scientist | Makerere University</p>
+    <div class="social-links flex gap-3 sm:gap-4 md:gap-5 mt-2 sm:mt-4 z-20">
+      <a href="https://github.com/ssekyanzielvis" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/20 hover:bg-primary-dark rounded-full flex items-center justify-center transition-all">
+        <i class="fab fa-github text-lg sm:text-xl"></i>
+      </a>
+      <a href="https://linkedin.com/in/elvis-ssekyanzi" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/20 hover:bg-primary-dark rounded-full flex items-center justify-center transition-all">
+        <i class="fab fa-linkedin text-lg sm:text-xl"></i>
+      </a>
+      <a href="https://wa.me/0706253680" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/20 hover:bg-primary-dark rounded-full flex items-center justify-center transition-all">
+        <i class="fab fa-whatsapp text-lg sm:text-xl"></i>
+      </a>
+      <a href="mailto:ssekyanzi.elvis@example.com" class="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/20 hover:bg-primary-dark rounded-full flex items-center justify-center transition-all">
+        <i class="fas fa-envelope text-lg sm:text-xl"></i>
+      </a>
+      <a href="tel:+0706253680" class="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/20 hover:bg-primary-dark rounded-full flex items-center justify-center transition-all">
+        <i class="fas fa-phone text-lg sm:text-xl"></i>
+      </a>
+      <a href="#" title="Kampala, Uganda" class="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/20 hover:bg-primary-dark rounded-full flex items-center justify-center transition-all">
+        <i class="fas fa-map-marker-alt text-lg sm:text-xl"></i>
+      </a>
     </div>
   </section>
   
@@ -1823,90 +1934,90 @@
   </div>
   </section>
 
-  <section id="cv" class="py-20">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Curriculum Vitae</h2>
-        <p class="text-xl text-gray-600">My professional background, education, and qualifications</p>
+  <section id="cv" class="py-12 sm:py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-3 sm:px-4">
+      <div class="text-center mb-8 sm:mb-12">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 text-gray-800">Curriculum Vitae</h2>
+        <p class="text-base sm:text-lg md:text-xl text-gray-600">My professional background, education, and qualifications</p>
       </div>
       
-      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+      <div class="bg-white rounded-lg sm:rounded-xl shadow-md overflow-hidden">
         <!-- CV Design based on the image provided -->
-        <div class="flex flex-col md:flex-row">
+        <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
           <!-- Left Side - Dark blue sidebar -->
-          <div class="bg-slate-800 text-white p-6 sm:p-8 md:w-1/3">
-            <div class="flex justify-center mb-6 sm:mb-8">
-              <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-blue-400 overflow-hidden shadow-lg">
+          <div class="cv-sidebar bg-slate-800 text-white p-3 sm:p-4 md:p-8 md:w-1/3">
+            <div class="flex justify-center mb-2 sm:mb-4 md:mb-8">
+              <div class="profile-image w-24 h-24 sm:w-28 sm:h-28 md:w-40 md:h-40 rounded-full border-2 sm:border-3 md:border-4 border-blue-400 overflow-hidden shadow-lg">
                 <img src="ssekyanzi.jpeg" alt="SSEKYANZI ABDULSALAM" class="w-full h-full object-cover">
               </div>
             </div>
             <div class="space-y-6">
               <div>
-                <h3 class="text-lg sm:text-xl font-bold text-blue-300 border-b border-blue-500/30 pb-2 mb-3 sm:mb-4">CONTACT</h3>
-                <div class="space-y-2 sm:space-y-3 text-gray-200">
-                  <p class="flex items-center text-sm sm:text-base"><i class="fas fa-user mr-2 sm:mr-3 text-blue-300 w-5"></i> <span class="truncate">SSEKYANZI ABDULSALAM</span></p>
-                  <p class="flex items-center text-sm sm:text-base"><i class="fas fa-phone mr-2 sm:mr-3 text-blue-300 w-5"></i> 0706253680</p>
-                  <p class="flex items-center text-sm sm:text-base"><i class="fas fa-envelope mr-2 sm:mr-3 text-blue-300 w-5"></i> <span class="truncate">abdulssekyanzi@gmail.com</span></p>
-                  <p class="flex items-center text-sm sm:text-base"><i class="fas fa-map-marker-alt mr-2 sm:mr-3 text-blue-300 w-5"></i> Makerere Kikoni</p>
-                  <p class="flex items-center text-sm sm:text-base"><i class="fas fa-flag mr-2 sm:mr-3 text-blue-300 w-5"></i> Ugandan</p>
-                  <p class="flex items-center text-sm sm:text-base"><i class="fas fa-venus-mars mr-2 sm:mr-3 text-blue-300 w-5"></i> Male</p>
+                <h3 class="section-title text-sm sm:text-base md:text-xl font-bold text-blue-300 border-b border-blue-500/30 pb-0.5 sm:pb-1 md:pb-2 mb-1 sm:mb-2 md:mb-4">CONTACT</h3>
+                <div class="space-y-1 sm:space-y-2 md:space-y-3 text-gray-200">
+                  <p class="flex items-center text-2xs sm:text-xs md:text-base"><i class="fas fa-user mr-1 sm:mr-2 md:mr-3 text-blue-300 w-3 sm:w-4 md:w-5"></i> <span class="truncate">SSEKYANZI ABDULSALAM</span></p>
+                  <p class="flex items-center text-2xs sm:text-xs md:text-base"><i class="fas fa-phone mr-1 sm:mr-2 md:mr-3 text-blue-300 w-3 sm:w-4 md:w-5"></i> 0706253680</p>
+                  <p class="flex items-center text-2xs sm:text-xs md:text-base"><i class="fas fa-envelope mr-1 sm:mr-2 md:mr-3 text-blue-300 w-3 sm:w-4 md:w-5"></i> <span class="truncate">abdulssekyanzi@gmail.com</span></p>
+                  <p class="flex items-center text-2xs sm:text-xs md:text-base"><i class="fas fa-map-marker-alt mr-1 sm:mr-2 md:mr-3 text-blue-300 w-3 sm:w-4 md:w-5"></i> Makerere Kikoni</p>
+                  <p class="flex items-center text-2xs sm:text-xs md:text-base"><i class="fas fa-flag mr-1 sm:mr-2 md:mr-3 text-blue-300 w-3 sm:w-4 md:w-5"></i> Ugandan</p>
+                  <p class="flex items-center text-2xs sm:text-xs md:text-base"><i class="fas fa-venus-mars mr-1 sm:mr-2 md:mr-3 text-blue-300 w-3 sm:w-4 md:w-5"></i> Male</p>
                 </div>
               </div>
               
               <div>
-                <h3 class="text-lg sm:text-xl font-bold text-blue-300 border-b border-blue-500/30 pb-2 mb-3 sm:mb-4">EDUCATION</h3>
-                <div class="space-y-3 sm:space-y-4 text-gray-200">
+                <h3 class="section-title text-sm sm:text-base md:text-xl font-bold text-blue-300 border-b border-blue-500/30 pb-0.5 sm:pb-1 md:pb-2 mb-1 sm:mb-2 md:mb-4">EDUCATION</h3>
+                <div class="space-y-1 sm:space-y-2 md:space-y-4 text-gray-200">
                   <div>
-                    <p class="font-semibold text-blue-200 text-sm sm:text-base">2023 - Present</p>
-                    <p class="font-medium text-sm sm:text-base">Bachelor's Degree in Computer Science</p>
-                    <p class="text-gray-300 text-xs sm:text-sm">Makerere University</p>
+                    <p class="font-semibold text-blue-200 text-2xs sm:text-xs md:text-base">2023 - Present</p>
+                    <p class="font-medium text-2xs sm:text-xs md:text-base">Bachelor's Degree in CS</p>
+                    <p class="text-gray-300 text-2xs sm:text-xs md:text-sm">Makerere University</p>
                   </div>
                   <div>
-                    <p class="font-semibold text-blue-200 text-sm sm:text-base">2021 - 2022</p>
-                    <p class="font-medium text-sm sm:text-base">Uganda Advanced Certificate of Education</p>
-                    <p class="text-gray-300 text-xs sm:text-sm">Busiika Muslim Secondary School</p>
+                    <p class="font-semibold text-blue-200 text-2xs sm:text-xs md:text-base">2021 - 2022</p>
+                    <p class="font-medium text-2xs sm:text-xs md:text-base">Uganda Advanced Certificate</p>
+                    <p class="text-gray-300 text-2xs sm:text-xs md:text-sm">Busiika Muslim S.S.</p>
                   </div>
                   <div>
-                    <p class="font-semibold text-blue-200 text-sm sm:text-base">2016 - 2019</p>
-                    <p class="font-medium text-sm sm:text-base">Uganda Certificate of Education</p>
-                    <p class="text-gray-300 text-xs sm:text-sm">Busiika Muslim Secondary School</p>
+                    <p class="font-semibold text-blue-200 text-2xs sm:text-xs md:text-base">2016 - 2019</p>
+                    <p class="font-medium text-2xs sm:text-xs md:text-base">Uganda Certificate</p>
+                    <p class="text-gray-300 text-2xs sm:text-xs md:text-sm">Busiika Muslim S.S.</p>
                   </div>
                 </div>
               </div>
               
-              <div>
-                <h3 class="text-lg sm:text-xl font-bold text-blue-300 border-b border-blue-500/30 pb-2 mb-3 sm:mb-4">SKILLS</h3>
-                <div class="space-y-1 sm:space-y-2 text-gray-200">
-                  <p class="flex items-center text-sm sm:text-base"><i class="fas fa-check-circle mr-2 text-blue-300 text-xs sm:text-sm"></i> <span class="truncate">Mobile App Development (Flutter)</span></p>
-                  <p class="flex items-center text-sm sm:text-base"><i class="fas fa-check-circle mr-2 text-blue-300 text-xs sm:text-sm"></i> <span class="truncate">Web Development (React)</span></p>
-                  <p class="flex items-center text-sm sm:text-base"><i class="fas fa-check-circle mr-2 text-blue-300 text-xs sm:text-sm"></i> Python Programming</p>
-                  <p class="flex items-center text-sm sm:text-base"><i class="fas fa-check-circle mr-2 text-blue-300 text-xs sm:text-sm"></i> Communication</p>
-                  <p class="flex items-center text-sm sm:text-base"><i class="fas fa-check-circle mr-2 text-blue-300 text-xs sm:text-sm"></i> Leadership</p>
-                  <p class="flex items-center text-sm sm:text-base"><i class="fas fa-check-circle mr-2 text-blue-300 text-xs sm:text-sm"></i> Problem-solving</p>
+              <div class="pt-1 sm:pt-2">
+                <h3 class="section-title text-sm sm:text-base md:text-xl font-bold text-blue-300 border-b border-blue-500/30 pb-0.5 sm:pb-1 md:pb-2 mb-1 sm:mb-2 md:mb-4">SKILLS</h3>
+                <div class="grid grid-cols-1 gap-0.5 sm:gap-1 md:gap-2 text-gray-200">
+                  <p class="flex items-center text-2xs sm:text-xs md:text-base"><i class="fas fa-check-circle mr-1 sm:mr-1.5 md:mr-2 text-blue-300 text-2xs sm:text-xs"></i> <span class="truncate">Mobile App Dev</span></p>
+                  <p class="flex items-center text-2xs sm:text-xs md:text-base"><i class="fas fa-check-circle mr-1 sm:mr-1.5 md:mr-2 text-blue-300 text-2xs sm:text-xs"></i> <span class="truncate">Web Development</span></p>
+                  <p class="flex items-center text-2xs sm:text-xs md:text-base"><i class="fas fa-check-circle mr-1 sm:mr-1.5 md:mr-2 text-blue-300 text-2xs sm:text-xs"></i> Python</p>
+                  <p class="flex items-center text-2xs sm:text-xs md:text-base"><i class="fas fa-check-circle mr-1 sm:mr-1.5 md:mr-2 text-blue-300 text-2xs sm:text-xs"></i> Communication</p>
+                  <p class="flex items-center text-2xs sm:text-xs md:text-base"><i class="fas fa-check-circle mr-1 sm:mr-1.5 md:mr-2 text-blue-300 text-2xs sm:text-xs"></i> Leadership</p>
+                  <p class="flex items-center text-2xs sm:text-xs md:text-base"><i class="fas fa-check-circle mr-1 sm:mr-1.5 md:mr-2 text-blue-300 text-2xs sm:text-xs"></i> Problem-solving</p>
                 </div>
               </div>
               
-              <div>
-                <h3 class="text-lg sm:text-xl font-bold text-blue-300 border-b border-blue-500/30 pb-2 mb-3 sm:mb-4">LANGUAGES</h3>
-                <div class="space-y-2 text-gray-200">
+              <div class="pt-1 sm:pt-2">
+                <h3 class="section-title text-sm sm:text-base md:text-xl font-bold text-blue-300 border-b border-blue-500/30 pb-0.5 sm:pb-1 md:pb-2 mb-1 sm:mb-2 md:mb-4">LANGUAGES</h3>
+                <div class="space-y-1 sm:space-y-1.5 md:space-y-2 text-gray-200">
                   <div class="flex justify-between items-center">
-                    <span class="text-sm sm:text-base">English</span>
+                    <span class="text-2xs sm:text-xs md:text-base">English</span>
                     <div class="flex">
-                      <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-300 mx-0.5"></span>
-                      <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-300 mx-0.5"></span>
-                      <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-300 mx-0.5"></span>
-                      <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-300 mx-0.5"></span>
-                      <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-300 mx-0.5"></span>
+                      <span class="w-0.5 h-0.5 sm:w-1 sm:h-1 md:w-2 md:h-2 rounded-full bg-blue-300 mx-0.5"></span>
+                      <span class="w-0.5 h-0.5 sm:w-1 sm:h-1 md:w-2 md:h-2 rounded-full bg-blue-300 mx-0.5"></span>
+                      <span class="w-0.5 h-0.5 sm:w-1 sm:h-1 md:w-2 md:h-2 rounded-full bg-blue-300 mx-0.5"></span>
+                      <span class="w-0.5 h-0.5 sm:w-1 sm:h-1 md:w-2 md:h-2 rounded-full bg-blue-300 mx-0.5"></span>
+                      <span class="w-0.5 h-0.5 sm:w-1 sm:h-1 md:w-2 md:h-2 rounded-full bg-blue-300 mx-0.5"></span>
                     </div>
                   </div>
                   <div class="flex justify-between items-center">
-                    <span class="text-sm sm:text-base">Luganda</span>
+                    <span class="text-2xs sm:text-xs md:text-base">Luganda</span>
                     <div class="flex">
-                      <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-300 mx-0.5"></span>
-                      <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-300 mx-0.5"></span>
-                      <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-300 mx-0.5"></span>
-                      <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-300 mx-0.5"></span>
-                      <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-300 mx-0.5"></span>
+                      <span class="w-0.5 h-0.5 sm:w-1 sm:h-1 md:w-2 md:h-2 rounded-full bg-blue-300 mx-0.5"></span>
+                      <span class="w-0.5 h-0.5 sm:w-1 sm:h-1 md:w-2 md:h-2 rounded-full bg-blue-300 mx-0.5"></span>
+                      <span class="w-0.5 h-0.5 sm:w-1 sm:h-1 md:w-2 md:h-2 rounded-full bg-blue-300 mx-0.5"></span>
+                      <span class="w-0.5 h-0.5 sm:w-1 sm:h-1 md:w-2 md:h-2 rounded-full bg-blue-300 mx-0.5"></span>
+                      <span class="w-0.5 h-0.5 sm:w-1 sm:h-1 md:w-2 md:h-2 rounded-full bg-blue-300 mx-0.5"></span>
                     </div>
                   </div>
                 </div>
@@ -1914,65 +2025,65 @@
             </div>
           </div>
       
-      <div class="bg-white p-6 sm:p-8 md:w-2/3">
-        <div class="mb-6 sm:mb-8">
-          <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-1 sm:mb-2">SSEKYANZI ABDULSALAM</h2>
-          <h3 class="text-lg sm:text-xl text-blue-700 font-medium">Computer Science Student</h3>
-          <div class="w-16 sm:w-20 h-1 bg-blue-600 mt-3 sm:mt-4 mb-4 sm:mb-6"></div>
+      <div class="cv-main bg-white p-3 sm:p-5 md:p-8 md:w-2/3">
+        <div class="mb-4 sm:mb-6 md:mb-8">
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-1 sm:mb-2">SSEKYANZI ABDULSALAM</h2>
+          <h3 class="text-base sm:text-lg md:text-xl text-blue-700 font-medium">Computer Science Student</h3>
+          <div class="w-12 sm:w-16 md:w-20 h-0.5 sm:h-1 bg-blue-600 mt-2 sm:mt-3 md:mt-4 mb-3 sm:mb-4 md:mb-6"></div>
         </div>
         
-        <div class="mb-6 sm:mb-8">
-          <h3 class="text-lg sm:text-xl font-bold text-gray-800 border-b border-gray-200 pb-2 mb-3 sm:mb-4">PROFILE</h3>
-          <div class="space-y-2 sm:space-y-3 text-gray-700">
-            <p class="leading-relaxed text-sm sm:text-base">I am Ssekyanzi Abdulsalam, a Ugandan Computer Science student at Makerere University, passionate about technology and innovation. Born and raised in Kampala, I bring a deep understanding of local tech challenges and opportunities in Uganda.</p>
-            <p class="leading-relaxed text-sm sm:text-base">As a Muslim, I value discipline, community, and ethical responsibility—principles I apply to my academic and professional work. My studies in Computer Science fuel my curiosity for software development, AI, and solving real-world problems through code.</p>
-            <p class="leading-relaxed text-sm sm:text-base">I aspire to leverage my technical skills to contribute to Uganda's growing tech ecosystem while embracing lifelong learning.</p>
+        <div class="mb-4 sm:mb-6 md:mb-8">
+          <h3 class="section-title text-base sm:text-lg md:text-xl font-bold text-gray-800 border-b border-gray-200 pb-1 sm:pb-2 mb-2 sm:mb-3 md:mb-4">PROFILE</h3>
+          <div class="space-y-1.5 sm:space-y-2 md:space-y-3 text-gray-700">
+            <p class="leading-relaxed text-xs sm:text-sm md:text-base">I am Ssekyanzi Abdulsalam, a Ugandan Computer Science student at Makerere University, passionate about technology and innovation. Born and raised in Kampala, I bring a deep understanding of local tech challenges and opportunities in Uganda.</p>
+            <p class="leading-relaxed text-xs sm:text-sm md:text-base">As a Muslim, I value discipline, community, and ethical responsibility—principles I apply to my academic and professional work. My studies in Computer Science fuel my curiosity for software development, AI, and solving real-world problems through code.</p>
+            <p class="leading-relaxed text-xs sm:text-sm md:text-base">I aspire to leverage my technical skills to contribute to Uganda's growing tech ecosystem while embracing lifelong learning.</p>
           </div>
         </div>
         
-        <div class="mb-6 sm:mb-8">
-          <h3 class="text-lg sm:text-xl font-bold text-gray-800 border-b border-gray-200 pb-2 mb-3 sm:mb-4">WORK EXPERIENCE</h3>
+        <div class="mb-4 sm:mb-6 md:mb-8">
+          <h3 class="section-title text-base sm:text-lg md:text-xl font-bold text-gray-800 border-b border-gray-200 pb-1 sm:pb-2 mb-2 sm:mb-3 md:mb-4">WORK EXPERIENCE</h3>
           
-          <div class="space-y-4 sm:space-y-6">
+          <div class="space-y-3 sm:space-y-4 md:space-y-6">
             <div>
               <div class="flex items-center">
-                <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-600 rounded-full mr-1.5 sm:mr-2"></div>
-                <h4 class="text-base sm:text-lg font-semibold text-blue-700">Mobile Application Development</h4>
+                <div class="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-blue-600 rounded-full mr-1 sm:mr-1.5 md:mr-2"></div>
+                <h4 class="text-sm sm:text-base md:text-lg font-semibold text-blue-700">Mobile Application Development</h4>
               </div>
-              <p class="text-gray-500 ml-3 sm:ml-4 text-xs sm:text-sm">2 years experience</p>
-              <p class="mt-1 sm:mt-2 ml-3 sm:ml-4 text-gray-700 text-sm sm:text-base">Developed mobile applications using Flutter for Android and iOS platforms, focusing on clean architecture and user experience.</p>
+              <p class="text-gray-500 ml-2 sm:ml-3 md:ml-4 text-xs sm:text-xs md:text-sm">2 years experience</p>
+              <p class="mt-1 sm:mt-1.5 md:mt-2 ml-2 sm:ml-3 md:ml-4 text-gray-700 text-xs sm:text-sm md:text-base">Developed mobile applications using Flutter for Android and iOS platforms, focusing on clean architecture and user experience.</p>
             </div>
             
             <div>
               <div class="flex items-center">
-                <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-600 rounded-full mr-1.5 sm:mr-2"></div>
-                <h4 class="text-base sm:text-lg font-semibold text-blue-700">Website Development with React</h4>
+                <div class="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-blue-600 rounded-full mr-1 sm:mr-1.5 md:mr-2"></div>
+                <h4 class="text-sm sm:text-base md:text-lg font-semibold text-blue-700">Website Development</h4>
               </div>
-              <p class="text-gray-500 ml-3 sm:ml-4 text-xs sm:text-sm">2 years experience</p>
-              <p class="mt-1 sm:mt-2 ml-3 sm:ml-4 text-gray-700 text-sm sm:text-base">Created responsive web applications using React, JavaScript, and modern front-end technologies with focus on performance and accessibility.</p>
+              <p class="text-gray-500 ml-2 sm:ml-3 md:ml-4 text-xs sm:text-xs md:text-sm">2 years experience</p>
+              <p class="mt-1 sm:mt-1.5 md:mt-2 ml-2 sm:ml-3 md:ml-4 text-gray-700 text-xs sm:text-sm md:text-base">Created responsive web applications using React, JavaScript, and modern front-end technologies with focus on performance and accessibility.</p>
             </div>
             
             <div>
               <div class="flex items-center">
-                <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-600 rounded-full mr-1.5 sm:mr-2"></div>
-                <h4 class="text-base sm:text-lg font-semibold text-blue-700">Machine Learning</h4>
+                <div class="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-blue-600 rounded-full mr-1 sm:mr-1.5 md:mr-2"></div>
+                <h4 class="text-sm sm:text-base md:text-lg font-semibold text-blue-700">Machine Learning</h4>
               </div>
-              <p class="text-gray-500 ml-3 sm:ml-4 text-xs sm:text-sm">1+ year experience</p>
-              <p class="mt-1 sm:mt-2 ml-3 sm:ml-4 text-gray-700 text-sm sm:text-base">Implemented machine learning models using Python with TensorFlow and PyTorch to solve practical problems and analyze data.</p>
+              <p class="text-gray-500 ml-2 sm:ml-3 md:ml-4 text-xs sm:text-xs md:text-sm">1+ year experience</p>
+              <p class="mt-1 sm:mt-1.5 md:mt-2 ml-2 sm:ml-3 md:ml-4 text-gray-700 text-xs sm:text-sm md:text-base">Implemented machine learning models using Python with TensorFlow and PyTorch to solve practical problems and analyze data.</p>
             </div>
           </div>
         </div>
         
-        <div class="mb-6 sm:mb-8">
-          <h3 class="text-lg sm:text-xl font-bold text-gray-800 border-b border-gray-200 pb-2 mb-3 sm:mb-4">REFERENCES</h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-            <div class="bg-gray-50 p-3 sm:p-4 rounded-lg">
-              <p class="font-bold text-gray-800 text-sm sm:text-base">NASSAZZI ANGEL LATIFAH</p>
-              <p class="text-gray-600 text-xs sm:text-sm">+256 752 682374</p>
+        <div class="mb-4 sm:mb-6 md:mb-8">
+          <h3 class="section-title text-base sm:text-lg md:text-xl font-bold text-gray-800 border-b border-gray-200 pb-1 sm:pb-2 mb-2 sm:mb-3 md:mb-4">REFERENCES</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4">
+            <div class="bg-gray-50 p-2 sm:p-3 md:p-4 rounded">
+              <p class="font-bold text-gray-800 text-xs sm:text-sm md:text-base">NASSAZZI ANGEL LATIFAH</p>
+              <p class="text-gray-600 text-xs sm:text-xs md:text-sm">+256 752 682374</p>
             </div>
-            <div class="bg-gray-50 p-3 sm:p-4 rounded-lg">
-              <p class="font-bold text-gray-800 text-sm sm:text-base">KAGOLO FIRIDAUS</p>
-              <p class="text-gray-600 text-xs sm:text-sm">+256 701 976391</p>
+            <div class="bg-gray-50 p-2 sm:p-3 md:p-4 rounded">
+              <p class="font-bold text-gray-800 text-xs sm:text-sm md:text-base">KAGOLO FIRIDAUS</p>
+              <p class="text-gray-600 text-xs sm:text-xs md:text-sm">+256 701 976391</p>
             </div>
           </div>
         </div>
