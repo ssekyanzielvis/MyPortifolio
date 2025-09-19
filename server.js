@@ -18,4 +18,20 @@ app.post('/submit', (req, res) => {
   res.json({ status: 'success' });
 });
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+// Try different ports if one is busy
+function startServer(port) {
+  app.listen(port)
+    .on('listening', () => {
+      console.log(`Server running on http://localhost:${port}`);
+    })
+    .on('error', (err) => {
+      if (err.code === 'EADDRINUSE') {
+        console.log(`Port ${port} is busy, trying next port...`);
+        startServer(port + 1);
+      } else {
+        console.error('Server error:', err);
+      }
+    });
+}
+
+startServer(PORT);
