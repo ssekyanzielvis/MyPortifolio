@@ -1091,45 +1091,92 @@
         overflow-x: hidden;
         overflow-y: visible;
         max-height: none;
-        gap: 25px;
-        padding: 15px 10px;
+        gap: 35px; /* Increased gap between cards */
+        padding: 20px 10px; /* Added more vertical padding */
       }
       
       .project-card {
         width: 100%;
         min-width: 0;
-        margin: 0 auto;
+        margin: 0 auto 15px; /* Added bottom margin for spacing */
         max-width: 92%;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); /* Enhanced shadow */
+        border-radius: 14px; /* Slightly more rounded corners */
+        border-bottom: 5px solid #6e8efb; /* Accent border at bottom */
+        position: relative;
+        padding-bottom: 5px;
       }
       
+      /* Card hover effect */
       .project-card:hover {
         transform: translateY(-3px);
       }
       
+      /* Visual divider between cards */
+      .project-card::after {
+        content: '';
+        position: absolute;
+        bottom: -25px;
+        left: 15%;
+        width: 70%;
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(110, 142, 251, 0.4), transparent);
+      }
+      
       .project-image {
         height: 180px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 14px 14px 0 0;
+      }
+      
+      /* Add slight overlay gradient to image bottom for better text contrast */
+      .project-image::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 30%;
+        background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
+        z-index: 1;
       }
       
       .project-content {
-        padding: 16px;
+        padding: 18px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
       }
       
       .project-title {
         font-size: 1.3rem;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
+        color: #333;
+        line-height: 1.3;
       }
       
       .project-description {
         font-size: 0.95rem;
-        margin-bottom: 12px;
+        margin-bottom: 14px;
+        line-height: 1.5;
+        color: #555;
+      }
+      
+      .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
       }
       
       .tech-tag {
-        padding: 4px 8px;
+        padding: 5px 10px;
         font-size: 0.8rem;
-        margin-right: 6px;
-        margin-bottom: 6px;
+        border-radius: 50px;
+        background-color: #f0f2f5;
+        color: #555;
+        display: inline-block;
+        font-weight: 500;
       }
       #contact {
         padding: 40px 10px;
@@ -1238,17 +1285,45 @@
       }
       
       /* Project cards adjustments for very small screens */
+      .projects-container {
+        padding: 0;
+      }
+      
+      .project-scroll {
+        padding: 15px 5px;
+        gap: 30px; /* Slightly reduced gap for very small screens */
+      }
+      
       .project-card {
-        max-width: 98%;
+        max-width: 94%;
+        margin-bottom: 10px;
       }
+      
+      .project-card::after {
+        bottom: -20px; /* Adjust divider position */
+      }
+      
       .project-image {
-        height: 150px;
+        height: 140px;
       }
+      
+      .project-content {
+        padding: 15px 14px;
+      }
+      
       .project-title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
       }
+      
       .project-description {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+      }
+      
+      .tech-tag {
+        padding: 4px 8px;
+        font-size: 0.75rem;
       }
     }
   </style>
